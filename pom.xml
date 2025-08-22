@@ -8,7 +8,7 @@
     <artifactId>tuan02</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>tuan02</name>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
