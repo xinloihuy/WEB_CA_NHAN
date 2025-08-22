@@ -7,3 +7,5 @@ FROM tomcat:10-jdk17
 WORKDIR /usr/local/tomcat/webapps
 COPY --from=build /app/target/*.war .
 EXPOSE 8080
+# Sao chép file server.xml tùy chỉnh
+COPY server.xml /usr/local/tomcat/conf/server.xml
