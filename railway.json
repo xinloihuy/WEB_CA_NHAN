@@ -6,15 +6,36 @@
       "providers": ["java"],
       "phases": {
         "setup": {
-          "nixPkgs": ["jdk17"]
+          "nixPkgs": ["openjdk17", "maven"]
         },
         "build": {
-          "cmd": "mvn clean package -DskipTests"
+          "cmd": [
+            "mvn clean package -DskipTests",
+            "wget https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.20/bin/apache-tomcat-10.1.20.tar.gz",
+            "tar -xzf apache-tomcat-10.1.20.tar.gz",
+            "mv apache-tomcat-10.1.20 /app/tomcat",
+            "cp target/*.war /app/tomcat/webapps/"
+          ]
         }
       }
     }
   },
   "deploy": {
-    "startCommand": "java -jar target/*.jar"
-  }
+    "startCommand": "/app/tomcat/bin/catalina.sh run"
+  },
+  "services": [
+    {
+      "name": "tuan02",
+      "ports": [
+        {
+          "port": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "env": {
+        "JAVA_HOME": "/usr/lib/jvm/java-17-openjdk",
+        "CATALINA_HOME": "/app/tomcat"
+      }
+    }
+  ]
 }
