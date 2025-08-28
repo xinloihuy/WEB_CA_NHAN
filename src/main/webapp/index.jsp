@@ -15,17 +15,26 @@
 
     <!-- Thông tin cá nhân -->
     <h2>Your information:</h2>
-    <label>First Name:</label>
-    <input type="text" name="firstName" required><br>
+    <div class="form-row">
+        <label>First Name:</label>
+        <input type="text" name="firstName" required>
+    </div>
 
-    <label>Last Name:</label>
-    <input type="text" name="lastName" required><br>
+    <div class="form-row">
+        <label>Last Name:</label>
+        <input type="text" name="lastName" required>
+    </div>
 
-    <label>Email:</label>
-    <input type="email" name="email" required><br>
+    <div class="form-row">
+        <label>Email:</label>
+        <input type="email" name="email" required>
+    </div>
 
-    <label>Date of Birth:</label>
-    <input type="date" name="dob"><br><br>
+    <div class="form-row">
+        <label>Date of Birth:</label>
+        <input type="date" name="dob">
+    </div>
+
 
     <!-- How did you hear about us -->
     <h2>How did you hear about us?</h2>
