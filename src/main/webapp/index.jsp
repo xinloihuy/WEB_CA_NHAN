@@ -6,6 +6,7 @@
     <title>Murach's Java Servlets and JSP</title>
 </head>
 <body>
+<img src="img.png" alt="Murach Logo" style="width:120px; margin-bottom: 10px;">
 <h1>Survey</h1>
 <p>If you have a moment, we’d appreciate it if you would fill out this survey.</p>
 
