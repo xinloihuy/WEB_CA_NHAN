@@ -1,28 +1,34 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="org.example.tuan02.Survey" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles/main.css" type="text/css">
-    <title>Thank you!</title>
-
+    <title>Survey Result</title>
 </head>
 <body>
-    <h1>Thanks for joining our email list</h1>
-    <p>Here is the information that you entered:</p>
-    <label>Email: </label>
-    <span>${user.email}</span><br>
-    <label>First Name:</label>
-    <span>${user.firstName}</span><br>
-    <label>Last Name:</label>
-    <span>${user.lastName}</span><br>
+<h1>Thank you for filling out the survey!</h1>
 
+<%
+    Survey s = (Survey) request.getAttribute("survey");
+    if (s != null) {
+%>
+<h2>Your Information:</h2>
+<p>First Name: <%= s.getFirstName() %></p>
+<p>Last Name: <%= s.getLastName() %></p>
+<p>Email: <%= s.getEmail() %></p>
+<p>Date of Birth: <%= s.getDob() %></p>
 
-    <p>To enter another email address, click on the Back
-        button in your browser or the Return button shown
-        below.</p>
+<h2>How did you hear about us?</h2>
+<p><%= s.getHear() %></p>
 
-    <form action="index.jsp" method="get">
-        <input type="hidden" name="action" value="join">
-        <input type="submit" value="Return">
-    </form>
+<h2>Announcements:</h2>
+<p><%= (s.getAnnounce1() != null ? s.getAnnounce1() : "No") %></p>
+<p><%= (s.getAnnounce2() != null ? s.getAnnounce2() : "No") %></p>
+
+<h2>Preferred contact method:</h2>
+<p><%= s.getContact() %></p>
+<%
+    }
+%>
 </body>
 </html>
