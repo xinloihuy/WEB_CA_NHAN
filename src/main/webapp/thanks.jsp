@@ -3,9 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
     <title>Survey Result</title>
 </head>
 <body>
+<img src="img.png" alt="Murach Logo" style="width:120px; margin-bottom: 10px;">
 <h1>Thank you for filling out the survey!</h1>
 
 <%

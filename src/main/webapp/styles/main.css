@@ -20,28 +20,28 @@ p {
     margin-bottom: 1em;
 }
 
-label {
-    display: inline-block;
-    width: 8em;
+.form-row {
+    display: flex;
+    align-items: center;
     margin-bottom: 0.5em;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="date"],
-select {
-    width: 18em;
+.form-row label {
+    width: 10em;
+    font-weight: bold;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="date"],
+.form-row select {
+    flex: 1;
     padding: 3px;
-    margin-bottom: 0.5em;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 0.5em;
-}
-
-br {
-    clear: both;
 }
 
 #submit {
