@@ -4,21 +4,48 @@ body {
     margin-left: 2em;
     margin-right: 2em;
 }
+
 h1 {
     color: teal;
+    margin-top: 0.5em;
 }
+
+h2 {
+    color: teal;
+    font-size: 13pt;
+    margin-top: 1.2em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
 label {
-    float: left;
-    width: 6em;
+    display: inline-block;
+    width: 8em;
     margin-bottom: 0.5em;
 }
-input[type="text"], input[type="email"] {
-    width: 15em;
-    margin-left: 0.5em;
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 18em;
+    padding: 3px;
     margin-bottom: 0.5em;
 }
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
 br {
     clear: both;
 }
+
 #submit {
-    margin-left: 0.5em; }
+    margin-top: 1em;
+    padding: 5px 15px;
+    font-size: 11pt;
+}
