@@ -5,14 +5,14 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/survey")
 public class SurveyServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
+            throws ServletException, IOException {   
         // Lấy dữ liệu từ form
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
@@ -22,6 +22,8 @@ public class SurveyServlet extends HttpServlet {
         String announce1 = request.getParameter("announce1");
         String announce2 = request.getParameter("announce2");
         String contact = request.getParameter("contact");
+        System.out.println("Email received: " + email);
+
 
         // Gắn vào bean
         Survey survey = new Survey();
@@ -33,11 +35,17 @@ public class SurveyServlet extends HttpServlet {
         survey.setAnnounce1(announce1);
         survey.setAnnounce2(announce2);
         survey.setContact(contact);
-
+        
         // Đưa bean lên request scope
         request.setAttribute("survey", survey);
 
         // Chuyển hướng sang trang thanks.jsp
         request.getRequestDispatcher("/thanks.jsp").forward(request, response);
+    }
+    
+    @Override
+    protected  void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doPost(request, response);
     }
 }

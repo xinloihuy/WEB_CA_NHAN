@@ -7,7 +7,7 @@
     <title>Survey Result</title>
 </head>
 <body>
-<img src="img.png" alt="Murach Logo" style="width:120px; margin-bottom: 10px;">
+<img src="static/img.png" alt="Murach Logo" style="width:120px; margin-bottom: 10px;">
 <h1>Thank you for filling out the survey!</h1>
 
 <%
@@ -32,5 +32,8 @@
 <%
     }
 %>
+
+<button onclick="window.location.href='/'">Return</button>
+
 </body>
 </html>

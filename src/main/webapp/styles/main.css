@@ -27,7 +27,7 @@ p {
 }
 
 .form-row label {
-    width: 10em;
+    width: 8em;
     font-weight: bold;
 }
 
@@ -35,17 +35,19 @@ p {
 .form-row input[type="email"],
 .form-row input[type="date"],
 .form-row select {
-    flex: 1;
-    padding: 3px;
+    width: 15em;
+    padding: 6px;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 0.5em;
+    margin-bottom: 6px;
 }
 
 #submit {
-    margin-top: 1em;
+    width: 6em;
+    margin-top: 0.5em;
     padding: 5px 15px;
-    font-size: 11pt;
+    font-size: 13pt;
 }
