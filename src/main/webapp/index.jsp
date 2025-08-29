@@ -15,7 +15,7 @@
 </form>
 
 <!-- Bài 5 ex2 -->
-<form action="${pageContext.request.contextPath}/bai5ex2" method="post">
+<form action="${pageContext.request.contextPath}/bai5ex2" method="get">
     <button type="submit">Bài 5 EX2</button>
 </form>
 
