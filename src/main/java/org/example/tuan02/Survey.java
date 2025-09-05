@@ -10,8 +10,7 @@ public class Survey implements Serializable {
     private String email;
     private String dob;
     private String hear;
-    private String announce1;
-    private String announce2;
+    private String update;
     private String contact;
 
     public Survey() {
@@ -53,18 +52,11 @@ public class Survey implements Serializable {
         this.hear = hear;
     }
 
-    public String getAnnounce1() {
-        return announce1;
+    public String getUpdate() {
+        return update;
     }
-    public void setAnnounce1(String announce1) {
-        this.announce1 = announce1;
-    }
-
-    public String getAnnounce2() {
-        return announce2;
-    }
-    public void setAnnounce2(String announce2) {
-        this.announce2 = announce2;
+    public void setUpdate(String update) {
+        this.update = update;
     }
 
     public String getContact() {

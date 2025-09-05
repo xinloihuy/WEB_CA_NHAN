@@ -16,4 +16,9 @@ public class bai5ex1Servlet extends HttpServlet {
             throws IOException, ServletException {
         request.getRequestDispatcher("/bai5ex1.jsp").forward(request, response);
     }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+        request.getRequestDispatcher("/bai5ex1.jsp").forward(request, response);
+    }
 }

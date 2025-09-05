@@ -19,11 +19,17 @@ public class SurveyServlet extends HttpServlet {
         String email = request.getParameter("email");
         String dob = request.getParameter("dob");
         String hear = request.getParameter("hear");
-        String announce1 = request.getParameter("announce1");
-        String announce2 = request.getParameter("announce2");
+        String update = request.getParameter("update");
         String contact = request.getParameter("contact");
-        System.out.println("Email received: " + email);
+        System.out.println("update received: " + update);
 
+        if (update == null) {
+            update = "No";
+        }
+        else {
+            update = "Yes";
+        }
+        System.out.println("update received: " + update);
 
         // Gắn vào bean
         Survey survey = new Survey();
@@ -32,8 +38,7 @@ public class SurveyServlet extends HttpServlet {
         survey.setEmail(email);
         survey.setDob(dob);
         survey.setHear(hear);
-        survey.setAnnounce1(announce1);
-        survey.setAnnounce2(announce2);
+        survey.setUpdate(update.trim());
         survey.setContact(contact);
         
         // Đưa bean lên request scope

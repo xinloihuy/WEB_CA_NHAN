@@ -1,23 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="styles/main.css" type="text/css">
-    <title>Bài Tập</title>
-</head>
-<body>
-<img src="static/img.png" alt="Murach Logo" style="width:120px; margin-bottom: 10px;">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:import url="includes/header.jsp" />
+<div class="container">
 <h1>Chọn Bài Tập</h1>
 
-<!-- Bài 5 ex1 -->
-<form action="${pageContext.request.contextPath}/bai5ex1" method="get" style="margin-bottom: 10px">
+<form action="${pageContext.request.contextPath}/bai5ex1" method="post" style="margin-bottom: 10px">
     <button type="submit">Bài 5 EX1</button>
 </form>
 
-<!-- Bài 5 ex2 -->
-<form action="${pageContext.request.contextPath}/bai5ex2" method="get">
+<form action="${pageContext.request.contextPath}/bai5ex2" method="post">
     <button type="submit">Bài 5 EX2</button>
 </form>
-
-</body>
-</html>
+</div>
+<c:import url="/includes/footer.jsp" />
