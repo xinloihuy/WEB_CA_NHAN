@@ -5,12 +5,12 @@
 <div class="center-container">
 <h1>Chọn Bài Tập</h1>
 
-<form action="${pageContext.request.contextPath}/bai5ex1" method="post" style="margin-bottom: 10px">
-    <button type="submit">Bài 5 EX1</button>
+<form action="${pageContext.request.contextPath}/bai6ex1" method="post" style="margin-bottom: 10px">
+    <button type="submit">Bài 6 EX1</button>
 </form>
 
-<form action="${pageContext.request.contextPath}/bai5ex2" method="post">
-    <button type="submit">Bài 5 EX2</button>
+<form action="${pageContext.request.contextPath}/bai6ex2" method="post">
+    <button type="submit">Bài 6 EX2</button>
 </form>
 </div>
 <c:import url="/includes/footer.jsp" />
