@@ -1,10 +1,9 @@
-package com.xinloihuy.exercise.bai05;
+package com.xinloihuy.email;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.*;
 
 import java.io.IOException;
 
@@ -12,11 +11,15 @@ import java.io.IOException;
 public class bai5ex2Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
+            throws ServletException, IOException {
+        request.setAttribute("method", "GET");
         request.getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
     }
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
+            throws ServletException, IOException {
+        request.setAttribute("method", "POST");
         request.getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
     }
 }
