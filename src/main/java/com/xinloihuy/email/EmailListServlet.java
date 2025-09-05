@@ -1,14 +1,13 @@
-package org.example.tuan02;
+package com.xinloihuy.email;
 
-import jakarta.persistence.metamodel.SetAttribute;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import com.xinloihuy.model.User;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(name = "emailList",value = "/emailList")
 public class EmailListServlet extends HttpServlet {
@@ -28,7 +27,7 @@ public class EmailListServlet extends HttpServlet {
             String lastname = request.getParameter("lastName");
             User user = new User(firstname,lastname,email);
             request.setAttribute("user",user);
-            url = "/thanks_mails.jsp";
+            url = "/WEB-INF/email/thanks_mails.jsp";
         }
 
         getServletContext().getRequestDispatcher(url).forward(request,response);

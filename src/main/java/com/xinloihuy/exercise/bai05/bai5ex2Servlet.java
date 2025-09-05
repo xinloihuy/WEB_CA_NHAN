@@ -1,4 +1,4 @@
-package org.example.tuan02;
+package com.xinloihuy.exercise.bai05;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -7,18 +7,16 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet("/bai5ex1")
-public class bai5ex1Servlet extends HttpServlet {
+@WebServlet("/bai5ex2")
+public class bai5ex2Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        request.getRequestDispatcher("/bai5ex1.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
     }
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        request.getRequestDispatcher("/bai5ex1.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
     }
 }

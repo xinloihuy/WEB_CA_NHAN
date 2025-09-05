@@ -1,11 +1,11 @@
-package org.example.tuan02;
+package com.xinloihuy.survey;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
+import com.xinloihuy.model.Survey;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/survey")
 public class SurveyServlet extends HttpServlet {
@@ -21,7 +21,6 @@ public class SurveyServlet extends HttpServlet {
         String hear = request.getParameter("hear");
         String update = request.getParameter("update");
         String contact = request.getParameter("contact");
-        System.out.println("update received: " + update);
 
         if (update == null) {
             update = "No";
@@ -29,7 +28,6 @@ public class SurveyServlet extends HttpServlet {
         else {
             update = "Yes";
         }
-        System.out.println("update received: " + update);
 
         // Gắn vào bean
         Survey survey = new Survey();
@@ -44,8 +42,8 @@ public class SurveyServlet extends HttpServlet {
         // Đưa bean lên request scope
         request.setAttribute("survey", survey);
 
-        // Chuyển hướng sang trang thanks.jsp
-        request.getRequestDispatcher("/thanks.jsp").forward(request, response);
+        // Chuyển hướng sang trang thanks_survey.jsp
+        request.getRequestDispatcher("/WEB-INF/survey/thanks_survey.jsp").forward(request, response);
     }
     
     @Override

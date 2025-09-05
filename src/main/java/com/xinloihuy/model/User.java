@@ -1,4 +1,4 @@
-package org.example.tuan02;
+package com.xinloihuy.model;
 
 import java.io.Serializable;
 

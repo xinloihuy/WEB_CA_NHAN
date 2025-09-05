@@ -1,6 +1,4 @@
-package org.example.tuan02;
-
-import jakarta.servlet.annotation.WebServlet;
+package com.xinloihuy.model;
 
 import java.io.Serializable;
 

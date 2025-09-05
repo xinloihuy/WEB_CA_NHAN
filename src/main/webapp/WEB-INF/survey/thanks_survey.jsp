@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:import url="includes/header.jsp" />
+<c:import url="/includes/header.jsp" />
 
 <div class="container">
     <h1>Thank you for filling out the survey!</h1>
@@ -20,10 +20,10 @@
         </c:if>
     </div>
 
-    <form action="index.jsp" method="get">
+    <form action="/index.jsp" method="post">
         <input type="hidden" name="action" value="return">
         <button type="submit">Return</button>
     </form>
 </div>
 
-<c:import url="includes/footer.jsp" />
+<c:import url="/includes/footer.jsp" />
