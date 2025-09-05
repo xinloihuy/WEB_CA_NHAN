@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <c:import url="includes/header.jsp" />
-
+<div class="container">
 <h1>Join our email list</h1>
 <p>To join our email list, enter your name and email address below.</p>
 
@@ -29,5 +29,5 @@
         <input type="submit" value="Join Now" id="submit">
     </div>
 </form>
-
+</div>
 <c:import url="/includes/footer.jsp" />

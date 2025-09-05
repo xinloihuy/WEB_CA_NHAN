@@ -2,22 +2,28 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <c:import url="includes/header.jsp" />
-<h1>Thank you for filling out the survey!</h1>
 
-<h2>Your Information:</h2>
-<p>First Name:</b> ${survey.firstName}</p>
-<p>Last Name:</b> ${survey.lastName}</p>
-<p>Email:</b> ${survey.email}</p>
-<p>Date of Birth:</b> ${survey.dob}</p>
-<p>Heard From:</b> ${survey.hear}</p>
+<div class="container">
+    <h1>Thank you for filling out the survey!</h1>
 
-<p><b>Updates:</b> ${survey.update}</p>
+    <div class="info">
+        <h2>Your Information</h2>
+        <p><b>First Name:</b> ${survey.firstName}</p>
+        <p><b>Last Name:</b> ${survey.lastName}</p>
+        <p><b>Email:</b> ${survey.email}</p>
+        <p><b>Date of Birth:</b> ${survey.dob}</p>
+        <p><b>Heard From:</b> ${survey.hear}</p>
+        <p><b>Updates:</b> ${survey.update}</p>
 
-<c:if test="${survey.update eq 'Yes'}">
-    <p><b>Contact Via:</b> ${survey.contact}</p>
-</c:if>
+        <c:if test="${survey.update eq 'Yes'}">
+            <p><b>Contact Via:</b> ${survey.contact}</p>
+        </c:if>
+    </div>
 
+    <form action="index.jsp" method="get">
+        <input type="hidden" name="action" value="return">
+        <button type="submit">Return</button>
+    </form>
+</div>
 
-<button onclick="window.location.href='/'">Return</button>
-</body>
-</html>
+<c:import url="includes/footer.jsp" />

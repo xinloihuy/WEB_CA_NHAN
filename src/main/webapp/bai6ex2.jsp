@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <c:import url="includes/header.jsp" />
+<div class="container">
 <h1>Survey</h1>
 <p>If you have a moment, we’d appreciate it if you would fill out this survey.</p>
 
@@ -27,7 +28,7 @@
 
     <div class="form-row">
         <label>Date of Birth:</label>
-        <input type="date" name="dob">
+        <input type="date" name="dob" required>
     </div>
 
 
@@ -52,6 +53,6 @@
     <!-- Submit -->
     <input type="submit" value="Submit" id="submit">
 </form>
-
+</div>
 
 <c:import url="/includes/footer.jsp" />
