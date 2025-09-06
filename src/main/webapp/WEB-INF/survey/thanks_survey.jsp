@@ -20,7 +20,7 @@
         </c:if>
     </div>
 
-    <form action="/index.jsp" method="post">
+    <form action="surveyForm" method="post">
         <input type="hidden" name="action" value="return">
         <button type="submit">Return</button>
     </form>
