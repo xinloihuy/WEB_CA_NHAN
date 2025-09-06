@@ -24,6 +24,16 @@
         <jsp-file>/WEB-INF/survey/surveyForm.jsp</jsp-file>
     </servlet>
 
+    <servlet>
+        <servlet-name>DownloadFormServlet</servlet-name>
+        <jsp-file>/WEB-INF/download/downloadForm.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CartFormServlet</servlet-name>
+        <jsp-file>/WEB-INF/cart/cartForm.jsp</jsp-file>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>EmailFormServlet</servlet-name>
         <url-pattern>/emailForm</url-pattern>
@@ -32,6 +42,16 @@
     <servlet-mapping>
         <servlet-name>SurveyFormServlet</servlet-name>
         <url-pattern>/surveyForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DownloadFormServlet</servlet-name>
+        <url-pattern>/downloadForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CartFormServlet</servlet-name>
+        <url-pattern>/cartForm</url-pattern>
     </servlet-mapping>
     
 
