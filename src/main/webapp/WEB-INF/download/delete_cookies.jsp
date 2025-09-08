@@ -3,12 +3,23 @@
 
 <c:import url="/includes/header.jsp" />
 
-<h1>Cookies</h1>
+<div class="center-container">
+    <h1>Cookies</h1>
 
-<p>All persistent cookies have been removed from this browser.</p>
+    <p>All persistent cookies have been removed from this browser.</p>
 
-<p><a href="?action=viewAlbums">View list of albums</a></p>
+    <div class="actions">
+        <form action="" method="get">
+            <input type="hidden" name="action" value="viewAlbums">
+            <button type="submit">🎵 View list of albums</button>
+        </form>
 
-<p><a href="?action=viewCookies">View all cookies</a></p>
+        <form action="" method="get">
+            <input type="hidden" name="action" value="viewCookies">
+            <button type="submit">🍪 View all cookies</button>
+        </form>
+    </div>
+</div>
+
 
 <c:import url="/includes/footer.jsp"/>

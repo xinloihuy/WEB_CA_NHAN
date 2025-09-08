@@ -92,7 +92,7 @@ footer {
 }
 
 .center-container {
-    max-width: 400px;
+    max-width: 500px;
     margin: 50px auto; /* căn giữa */
     text-align: center;
     padding: 20px;
@@ -135,3 +135,31 @@ button:hover {
     font-weight: bold;
 }
 
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+.actions form {
+    display: inline-block;
+    margin: 0 14px;
+}
+
+.actions button {
+    margin: 5px; /* khoảng cách thêm giữa các nút */
+}

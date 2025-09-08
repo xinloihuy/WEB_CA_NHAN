@@ -2,27 +2,42 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <c:import url="/includes/header.jsp" />
+<div class="center-container">
+    <h1>Cookies</h1>
 
-<h1>Cookies</h1>
+    <p>
+        Here's a table with all of the cookies that this browser is sending
+        to the current server.
+    </p>
 
-<p>Here's a table with all of the cookies that this
-    browser is sending to the current server.</p>
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Value</th>
-    </tr>
-    <c:forEach var="c" items="${cookie}">
+    <table>
+        <colgroup>
+            <col style="width:30%">
+            <col style="width:70%">
+        </colgroup>
         <tr>
-            <td><c:out value="${c.value.name}"/></td>
-            <td><c:out value="${c.value.value}"/></td>
+            <th>Name</th>
+            <th>Value</th>
         </tr>
-    </c:forEach>
-</table>
+        <c:forEach var="c" items="${cookie}">
+            <tr>
+                <td><c:out value="${c.value.name}"/></td>
+                <td><c:out value="${c.value.value}"/></td>
+            </tr>
+        </c:forEach>
+    </table>
 
-<p><a href="download?action=viewAlbums">View list of albums</a></p>
+    <div class="actions">
+        <form action="download" method="get">
+            <input type="hidden" name="action" value="viewAlbums">
+            <button type="submit">🎵 View list of albums</button>
+        </form>
 
-<p><a href="download?action=deleteCookies">Delete all persistent cookies</a></p>
+        <form action="download" method="get">
+            <input type="hidden" name="action" value="deleteCookies">
+            <button type="submit">🗑 Delete all persistent cookies</button>
+        </form>
+    </div>
+</div>
 
 <c:import url="/includes/footer.jsp"/>

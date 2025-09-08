@@ -5,14 +5,27 @@
 
 <form action="download" method="post">
     <input type="hidden" name="action" value="registerUser">
-    <label class="pad_top">Email:</label>
-    <input type="email" name="email" value="${user.email}"><br>
-    <label class="pad_top">First Name:</label>
-    <input type="text" name="firstName" value="${user.firstName}"><br>
-    <label class="pad_top">Last Name:</label>
-    <input type="text" name="lastName" value="${user.lastName}"><br>
-    <label>&nbsp;</label>
-    <input type="submit" value="Register">
+
+    <div class="form-row">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="${user.email}">
+    </div>
+
+    <div class="form-row">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" value="${user.firstName}">
+    </div>
+
+    <div class="form-row">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" value="${user.lastName}">
+    </div>
+
+    <div class="form-row">
+        <label>&nbsp;</label>
+        <input type="submit" id="submit" value="Register">
+    </div>
 </form>
+
 
 <c:import url="/includes/footer.jsp"/>
