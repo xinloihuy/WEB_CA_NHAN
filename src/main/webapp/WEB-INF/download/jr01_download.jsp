@@ -14,11 +14,11 @@
     </tr>
     <tr>
         <td>Filter</td>
-        <td><a href="/musicStore/sound/${productCode}/filter.mp3">MP3</a></td>
+        <td><a href="/musicStore/sound/${productCode}/field_of_hopes.mp3">MP3</a></td>
     </tr>
     <tr>
         <td>So Long Lazy Ray</td>
-        <td><a href="/musicStore/sound/${productCode}/so_long.mp3">MP3</a></td>
+        <td><a href="/musicStore/sound/${productCode}/field_of_hopes.mp3">MP3</a></td>
     </tr>
 </table>
 

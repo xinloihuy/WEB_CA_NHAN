@@ -6,11 +6,11 @@
 <h1>Chọn Bài Tập</h1>
 
 <form action="downloadForm" method="post" style="margin-bottom: 10px">
-    <button type="submit">Bài 9 EX1</button>
+    <button type="submit">Bài Tập Download</button>
 </form>
 
 <form action="loadProducts" method="get">
-    <button type="submit">Bài 9 EX2</button>
+    <button type="submit">Bài Tập Cart</button>
 </form>
 </div>
 <c:import url="/includes/footer.jsp" />

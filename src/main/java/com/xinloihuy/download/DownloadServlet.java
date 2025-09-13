@@ -66,7 +66,10 @@ public class DownloadServlet extends HttpServlet {
         String url;
         // if User object doesn't exist, check email cookie
         if (user == null) {
+            // get cookies from client
             Cookie[] cookies = request.getCookies();
+
+            // get email of user from cookies
             String emailAddress =
                     CookieUtil.getCookieValue(cookies, "emailCookie");
 
