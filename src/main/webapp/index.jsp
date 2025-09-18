@@ -5,12 +5,12 @@
 <div class="center-container">
 <h1>Chọn Bài Tập</h1>
 
-<form action="downloadForm" method="post" style="margin-bottom: 10px">
-    <button type="submit">Bài Tập Download</button>
+<form action="SqlgatewayForm" method="post" style="margin-bottom: 10px">
+    <button type="submit">Bài Tập SQLGateway</button>
 </form>
 
-<form action="loadProducts" method="get">
-    <button type="submit">Bài Tập Cart</button>
+<form action="UserAdminForm" method="post">
+    <button type="submit">Bài Tập UserAdmin</button>
 </form>
 </div>
 <c:import url="/includes/footer.jsp" />

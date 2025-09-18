@@ -34,6 +34,26 @@
         <jsp-file>/WEB-INF/cart/cartForm.jsp</jsp-file>
     </servlet>
 
+    <servlet>
+        <servlet-name>SQLgatewayForm</servlet-name>
+        <jsp-file>/WEB-INF/DB/gateway.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UserAdminForm</servlet-name>
+        <jsp-file>/WEB-INF/DB/UserAdmin.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserAdminForm</servlet-name>
+        <url-pattern>/UserAdminForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SQLgatewayForm</servlet-name>
+        <url-pattern>/SqlgatewayForm</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>EmailFormServlet</servlet-name>
         <url-pattern>/emailForm</url-pattern>
